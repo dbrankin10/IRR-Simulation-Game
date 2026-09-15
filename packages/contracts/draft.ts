@@ -32,6 +32,6 @@ export function reviewDraft(draft: WorldDraft) {
     ...(!draft.nation.trim() ? ['Define your nation.'] : []),
     ...(!draft.role.trim() ? ['Define the office you will hold.'] : []),
     ...sections.filter(([key]) => !draft[key].trim()).map(([,title]) => `Complete ${title.toLowerCase()}.`),
-    'Structured world validation and AI setup assistance are not connected yet. These notes cannot launch a campaign.'
+    'Structured world validation and Begin Reign are not connected yet. Optional AI review provides suggestions only; these notes cannot launch a campaign.'
   ];
 }

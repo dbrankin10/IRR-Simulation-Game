@@ -1,0 +1,13 @@
+.ai-review{margin-top:32px;padding-top:32px;border-top:1px solid #ded8cb}
+.ai-review h2{display:flex;align-items:center;gap:12px;font-size:30px}
+.ai-review>p{max-width:76ch;line-height:1.7}
+.ai-review .budget-line{font-size:12px;line-height:1.7;color:#665d53;margin-top:16px}
+.ai-result{margin-top:28px;background:#f5f2e9;border:1px solid #ded8cb;padding:24px;overflow-wrap:anywhere}
+.ai-result h3{font-size:23px;margin:22px 0 8px}
+.ai-result p,.ai-result li{font-size:14px;line-height:1.8}
+.ai-result ul{padding-left:22px}
+.ai-result li+li{margin-top:8px}
+.ai-suggestion{padding-top:8px;margin-top:20px;border-top:1px solid #ded8cb}
+.ai-suggestion blockquote{margin:12px 0;padding:16px;border-left:3px solid #a58c51;background:#fffdf7;white-space:pre-wrap;line-height:1.8;font-size:14px}
+.ai-suggestion small{color:#756b5c}
+@media(max-width:700px){.ai-review h2{font-size:26px}.ai-result{padding:16px}.ai-review .button{width:100%;white-space:normal}}
