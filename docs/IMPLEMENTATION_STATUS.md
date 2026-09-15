@@ -2,11 +2,14 @@
 
 ## Completed foundation
 
+- Live deployment: https://imperium.dbrankin10.workers.dev (Cloudflare Worker `imperium`, static assets plus API). Source pushed to `dbrankin10/IRR-Simulation-Game` on `main`.
+- Deployment uses a dedicated account-scoped user token with Workers Scripts edit and Account Settings read. No unrelated project's build token is used. Cloudflare Git-triggered builds are not yet connected; the initial deployment was made directly with Wrangler.
 - Next.js static React PWA shell, responsive five-tab navigation and world-creation notes editor.
 - Cloudflare Worker API with Supabase token verification, typed draft validation and versioned/idempotent save calls.
 - Supabase migration applied through the authenticated project SQL editor: 17 application tables in private schemas, all with RLS enabled. Three authenticated owner-scoped RPC functions expose only draft metadata/content. No service-role key is used.
 - Local Postgres-compatible integration tests pass for migration execution, ownership, direct-table denial, conflicting versions, idempotency and cross-campaign foreign keys.
 - Domain tests cover hard inventory conservation and awareness-based interrupt boundaries.
+- Production smoke checks: health/config return 200 with AI disabled; unauthenticated campaigns return 401; PWA manifest and browser-rendered home page load successfully. Six local test cases and TypeScript/build checks passed. Live authenticated save/resume still requires the owner's separate game-user Auth login; dashboard sign-in does not create that account.
 
 ## Architectural decisions made during implementation
 
