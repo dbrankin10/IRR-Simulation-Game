@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "imperium",
+  "main": "apps/api/worker.ts",
+  "compatibility_date": "2026-09-14",
+  "account_id": "526a156954ae5456fdd161914d2c26e1",
+  "assets": { "directory": "./out", "binding": "ASSETS", "run_worker_first": ["/api/*"] },
+  "vars": {
+    "SUPABASE_URL": "https://ztiasprnzbplewechvxj.supabase.co",
+    "SUPABASE_PUBLISHABLE_KEY": "sb_publishable_AO2i9BY6F0ZOYTLy1laI8A_ToQO9w59",
+    "AI_ENABLED": "false"
+  }
+}
