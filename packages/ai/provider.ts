@@ -41,7 +41,8 @@ export class OpenAIReviewProvider implements ReviewProvider {
   model = MODEL;
   private key:string;
   private transport:typeof fetch;
-  constructor(key:string,transport:typeof fetch=fetch){this.key=key;this.transport=transport;}
+  // Wrap native fetch: calling it as this.transport gives it an invalid receiver in workerd.
+  constructor(key:string,transport:typeof fetch=(input,init)=>fetch(input,init)){this.key=key;this.transport=transport;}
   async review(draft: WorldDraft): Promise<ProviderResult> {
     const response = await this.transport('https://api.openai.com/v1/responses', {
       method:'POST', headers:{Authorization:`Bearer ${this.key}`,'Content-Type':'application/json'},
